@@ -23,3 +23,15 @@ model Task {
   @@map("tasks")
 }
 
+model Nota {
+  id Int @id @default(autoincrement())
+  titulo String
+  conteudo String
+  favorito Boolean @default(false)
+  cor String?
+  
+  criadoEm DateTime @default(now())
+  atulizadaEM DateTime @updatedAt
+
+  @@map("notas")
+}
